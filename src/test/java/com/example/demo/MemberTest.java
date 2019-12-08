@@ -21,7 +21,6 @@ public class MemberTest {
 	/*
 	 * Todo
 	 * db에 데이터가 실제로 있을 때 가정해서 수정하기
-	 * 자동완성 설정
 	 */
 	
 	@Test
