@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,30 +13,31 @@ import org.springframework.transaction.annotation.Transactional;
 @SpringBootTest
 @Transactional
 public class MemberTest {
-
+	private static final Logger LOGGER = LoggerFactory.getLogger(MemberTest.class);
+	
 	@Autowired
 	private MemberRepository memberDao;
 
 	/*
 	 * Todo
 	 * db에 데이터가 실제로 있을 때 가정해서 수정하기
-	 * 로그로 결과 확인
 	 * 자동완성 설정
 	 */
 	
 	@Test
 	public void addTest() {
-		System.out.println("add test");
+		LOGGER.info("add test@@@@@@@@@@@@@@@@@@@");
 
-		Member member = new Member("leejunsu", "hello world");
-		
+		Member member = new Member("leejunsu", "hello world");		
 		memberDao.save(member);
 
+		List<Member> memberList = memberDao.findAll();
+		System.out.println(memberList);
 	}
 	
 	@Test
 	public void getTest() {
-		System.out.println("get test");
+		LOGGER.info("get test@@@@@@@@@@@@@@@@@@@");
 		
 		Member newMember = new Member("leejunsu", "hello world");
 		memberDao.save(newMember);
@@ -46,7 +49,7 @@ public class MemberTest {
 	
 	@Test
 	public void getAllTest() {
-		System.out.println("getAll test");
+		LOGGER.info("getAll test@@@@@@@@@@@@@@@@@@@");
 		
 		List<Member> newMemberList = new ArrayList<>();
 		newMemberList.add(new Member("leejunsu", "hello world"));
@@ -60,7 +63,7 @@ public class MemberTest {
 
 	@Test
 	public void deleteTest() {
-		System.out.println("delete test");
+		LOGGER.info("delete test@@@@@@@@@@@@@@@@@@@");
 		
 		Member newMember = new Member("a","b");
 		memberDao.save(newMember);
