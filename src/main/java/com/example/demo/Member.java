@@ -23,7 +23,12 @@ class Member {
 	}
 
 	public Member(String name, String message) {
-		super();
+		this.name = name;
+		this.message = message;
+	}
+	
+	public Member(int id, String name, String message) {
+		this.id = id;
 		this.name = name;
 		this.message = message;
 	}
