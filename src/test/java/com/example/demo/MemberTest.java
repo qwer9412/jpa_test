@@ -132,4 +132,19 @@ public class MemberTest {
 		
 		assertEquals(memberList.size(), memberDbCount);
 	}
+	
+	@Test
+	public void findNameTest() {
+		LOGGER.info("find name test@@@@@@@@@@@@@@@@@@@@@@@@@");
+		
+		Member newMember = new Member("name","message");
+		memberDao.save(newMember);
+		
+		PageRequest pageRequest = PageRequest.of(0, 1);
+		Member firstMember = memberDao.findAll(pageRequest).getContent().get(0);
+		
+		String findName = memberDao.findNameById(firstMember.getId());
+		
+		assertEquals(firstMember.getName(), findName);
+	}
 }
