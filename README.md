@@ -48,4 +48,15 @@ https://www.petrikainulainen.net/spring-data-jpa-tutorial
 
 ### JPQL  
 · 엔티티는 db의 테이블 이름이 아닌 자바단에서의 엔티티 이름  
-· 별칭은 무조건 사용해야함, as는 생략 가능
+· 별칭은 무조건 사용해야함, as는 생략 가능  
+
+<br/>
+<br/>
+
+### spring data jpa 문법  
+<br/>
+## 1. 함수 이름을 이용한 jpa 사용
+1) find..By, read..By, query..By, count..By, get..By 사용  
+2) 갯수 제한 -> By 앞에 First 나 Top + 숫자 사용.  
+&nbsp;&nbsp;&nbsp;ex) findFist2By
+3) distinct 사용 -> findTitleDistinctBy or findDistinctTitleBy
