@@ -1,7 +1,7 @@
 package com.example.demo;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -146,5 +146,24 @@ public class MemberTest {
 		String findName = memberDao.findNameById(firstMember.getId());
 		
 		assertEquals(firstMember.getName(), findName);
+	}
+	
+	@Test
+	public void findNameOrMessageTest() {
+		LOGGER.info("find name or message test@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		
+		List<Member> newMemberList = new ArrayList<>();
+		for(int i = 1 ; i <= 3; i++) {
+			newMemberList.add(new Member("name" + i, "message" +i ));
+		}
+		memberDao.saveAll(newMemberList);
+		
+		List<Member> name1Message2Member = memberDao.findByNameOrMessage("name1","message2");
+		
+		for(Member member : name1Message2Member) {
+			if(!(member.getName().equals("name1") || member.getMessage().equals("message2"))) {
+				fail("name1 or message2 가 아닌 값이 있음");
+			}
+		}
 	}
 }
