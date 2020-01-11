@@ -59,5 +59,5 @@ https://www.petrikainulainen.net/spring-data-jpa-tutorial
 #### 1. 함수 이름을 이용한 jpa 사용  
 1) find..By, read..By, query..By, count..By, get..By 사용  
 2) 갯수 제한 -> By 앞에 First 나 Top + 숫자 사용.  
-&nbsp;&nbsp;&nbsp;ex) findFist2By  
+&nbsp;ex) findFist2By  
 3) distinct 사용 -> findTitleDistinctBy or findDistinctTitleBy  
