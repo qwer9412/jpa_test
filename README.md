@@ -53,7 +53,7 @@ https://www.petrikainulainen.net/spring-data-jpa-tutorial
 <br/>
 <br/>
 
-### spring data jpa 문법  
+# spring data jpa 문법  
 
 #### 1. 함수 이름을 이용한 jpa 사용  
 1) find..By, read..By, query..By, count..By, get..By 사용  
