@@ -1,7 +1,7 @@
 # jpa_test  
     
 출처 : https://gmlwjd9405.github.io/2018/12/25/difference-jdbc-jpa-mybatis.html  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.petrikainulainen.net/spring-data-jpa-tutorial
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.petrikainulainen.net/spring-data-jpa-tutorial
     
 ### ORM(Object-Relational Mapping) vs SQL mapper  
 · ORM은 데이터베이스 객체를 자바 객체로 매핑함으로써 객체 간의 관계를 바탕으로 SQL을 자동으로 생성해주지만  
