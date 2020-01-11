@@ -1,6 +1,6 @@
 # jpa_test  
     
-출처
+출처  
 https://gmlwjd9405.github.io/2018/12/25/difference-jdbc-jpa-mybatis.html  
 https://www.petrikainulainen.net/spring-data-jpa-tutorial
     
